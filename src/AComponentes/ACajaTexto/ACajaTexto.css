@@ -1,0 +1,45 @@
+.acajatexto {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+    position: relative;
+}
+
+/** Estilos para el titulo */
+.acajatexto label {
+    margin-bottom: 0.4rem;
+    padding-left: 0.3rem;
+    text-align: left;
+}
+
+/* Estilos para el input */
+.acajatexto .acajatexto-contenedor {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.acajatexto .acajatexto-txt {
+    border: 1px solid #1F94AF;
+    outline: none;
+    border-radius: 10px;
+    padding: 0.4rem;
+    font-family: "NewGotRm";
+    height: 100%;
+}
+
+.acajatexto .acajatexto-contenedor-icono{
+    margin-left:  -1.5rem;
+}
+
+.acajatexto .acajatexto-txt:focus {
+    border: 1px solid #16748D;
+}
+
+/* Estilos para los errores */
+.acajatexto .acajatexto-error {
+    color: red;
+    padding-left: 0.3rem;
+}
