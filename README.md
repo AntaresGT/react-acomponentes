@@ -3,5 +3,5 @@ Esta es una libreria personalizada creada por Antares para uso general para la w
 
 ## Dependencias usadas
 
-Nombre dependencia | Documentación
-react-icons        | https://react-icons.github.io/react-icons
+| Nombre dependencia | Documentación                             |
+| react-icons        | https://react-icons.github.io/react-icons |
