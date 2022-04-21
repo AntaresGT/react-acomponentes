@@ -11,6 +11,7 @@ class ACajaTexto extends React.Component {
      * @param {Object} props Objeto que llena automaticamente react
      * @param {boolean} [props.visible] Si es true, se muestra la etiqueta, si es false, no se muestra
      * @param {string} [props.titulo] Texto que se mostrará en la etiqueta
+     * @param {IconType} [props.icono] Icono que se mostrará junto al texto
      */
     constructor(props){
         super(props);
@@ -52,9 +53,12 @@ class ACajaTexto extends React.Component {
                     <this.TituloACajaTexto />
                     <div className="acajatexto-contenedor">
                         <input type={this.props.tipo || "text"} name={this.uuid} id={this.uuid} className={"acajatexto-txt"} />
-                        <div className="acajatexto-contenedor-icono">
-                            {this.props.icono}
-                        </div>
+                        {
+                            this.props.hasOwnProperty('icono') &&
+                            <div className="acajatexto-contenedor-icono">
+                                {this.props.icono}
+                            </div>
+                        }
                     </div>
                     <this.TextoError />
                 </div>
