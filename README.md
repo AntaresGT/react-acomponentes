@@ -1,2 +1,2 @@
 # react-acomponentes
-Componentes personalizados para las páginas web que se hagan (En desarrollo)
+Esta es una libreria personalizada creada por Antares para uso general para la web
