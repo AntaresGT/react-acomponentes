@@ -31,7 +31,8 @@
 }
 
 .acajatexto .acajatexto-contenedor-icono{
-    margin-left:  -1.5rem;
+    position: absolute;
+    right: 0.3rem;
 }
 
 .acajatexto .acajatexto-txt:focus {
