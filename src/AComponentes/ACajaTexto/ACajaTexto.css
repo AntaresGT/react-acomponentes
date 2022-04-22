@@ -1,8 +1,8 @@
 .acajatexto {
     display: flex;
     flex-direction: column;
-    border: 1px solid red;
     position: relative;
+    margin-bottom: 0.5rem;
 }
 
 /** Estilos para el titulo */
@@ -35,6 +35,14 @@
     right: 0.3rem;
 }
 
+.acajatexto .acajatexto-txt:valid{
+    border: 1px solid #1F94AF;
+}
+
+.acajatexto .acajatexto-txt:invalid{
+    border: 1px solid red;
+}
+
 .acajatexto .acajatexto-txt:focus {
     border: 1px solid #16748D;
 }
@@ -43,4 +51,5 @@
 .acajatexto .acajatexto-error {
     color: red;
     padding-left: 0.3rem;
+    padding-top: 0.3rem;
 }
