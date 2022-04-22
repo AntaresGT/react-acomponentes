@@ -6,6 +6,9 @@ import './ACajaTexto.css';
 // Componentes
 import AEtiqueta from '../AEtiqueta';
 
+// Utilidades
+import AExpReg from "./../AUtileriaComponentes/AExpReg";
+
 class ACajaTexto extends React.Component {
 
     /**
@@ -42,13 +45,47 @@ class ACajaTexto extends React.Component {
     }
 
     /**
+     * Obtiene el nombre del control
+     * @returns {string}
+     */
+    get Refuuid(){
+        return this.uuid;
+    }
+
+    /**
      * Está función envia el texto al padre
      * @param {string} texto Texto que se ingresó en el control
      */
     _cambioTexto(texto){
         if(this.props.hasOwnProperty('cambioTexto')){
+
+            let expReg = this.props.expRegular;
+
+            if(expReg !== undefined){
+                if(!AExpReg.validarExpresionRegular(expReg, texto)){
+                    this.setState({
+                        lbd_error: "El texto no cumple con los caracteres validos"
+                    });
+                }
+                else{
+                    this.setState({
+                        lbd_error: ""
+                    });
+                }
+            }
+
             this.props.cambioTexto(texto);
         }
+    }
+
+    /**
+     * Esta función coloca un texto de error en el componente
+     * @param {string} err 
+     */
+    FijarMsjError(err){
+        this.setState({
+            lbd_error: err
+        });
     }
 
     TituloACajaTexto = () => {
@@ -107,7 +144,7 @@ class ACajaTexto extends React.Component {
                             id={this.uuid}
                             className={"acajatexto-txt " + this.props.classNameTexto}
                             onChange={(e) => {e.preventDefault(); this._cambioTexto(e.target.value)}}
-                            pattern={this.props.expRegular}
+                            pattern={this.props.expRegular.toString()}
                             placeholder={this.props.placeholder}
                             style={this.props.estilosTexto}
                         />
@@ -139,7 +176,7 @@ ACajaTexto.propTypes = {
     estilos: PropTypes.object,
     tipo: PropTypes.string,
     requerido: PropTypes.bool,
-    expRegular: PropTypes.string,
+    expRegular: PropTypes.arrayOf(PropTypes.instanceOf(RegExp)),
     className: PropTypes.string,
     classNameTitulo: PropTypes.string,
     estilosTitulo: PropTypes.object,
