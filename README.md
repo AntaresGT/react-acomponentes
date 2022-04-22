@@ -4,6 +4,12 @@ Esta es una libreria personalizada creada por Antares para uso general para la w
 ## Advertencia
 Este proyecto está actualmente en desarrollo
 
+## Instalación
+```yarn add https://github.com/AntaresGT/react-acomponentes.git```
+```yarn add react-acomponentes```
+```npm i https://github.com/AntaresGT/react-acomponentes.git```
+```npm i react-acomponentes```
+
 ## Dependencias usadas
 
 | Nombre dependencia | Documentación                             | Especificación sobre el uso                                                        |
