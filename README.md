@@ -5,10 +5,10 @@ Esta es una libreria personalizada creada por Antares para uso general para la w
 Este proyecto está actualmente en desarrollo
 
 ## Instalación
-```yarn add https://github.com/AntaresGT/react-acomponentes.git```
-```yarn add react-acomponentes```
-```npm i https://github.com/AntaresGT/react-acomponentes.git```
-```npm i react-acomponentes```
+yarn instalación repositorio ```yarn add https://github.com/AntaresGT/react-acomponentes.git```
+yarn instalación ```yarn add react-acomponentes```
+npm instalación desde repositorio ```npm i https://github.com/AntaresGT/react-acomponentes.git```
+npm instalación ```npm i react-acomponentes```
 
 ## Dependencias usadas
 
