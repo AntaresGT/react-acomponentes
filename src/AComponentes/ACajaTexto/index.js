@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import AControl from './../AUtileriaComponentes/AControl';
 import './ACajaTexto.css';
 
@@ -9,29 +8,32 @@ import AEtiqueta from '../AEtiqueta';
 // Utilidades
 import AExpReg from "./../AUtileriaComponentes/AExpReg";
 
+
+
+/**
+ * @typedef PropsACajaTexto
+ * @property {boolean} [visible] Si es true, se muestra la etiqueta, si es false, no se muestra
+ * @property {string} valor Valor que se muestra en el control
+ * @property {FunctionStringCallback} [cambioTexto] Función que se ejecuta cuando se cambia el texto
+ * @property {string} [titulo] Texto que se mostrará en la etiqueta
+ * @property {IconType} [icono] Icono que se mostrará junto al texto
+ * @property {StyleSheet} [estilos] Propiedad que le da estilos al contenedor
+ * @property {string} [tipo] Propiedad que le dice al control si es de tipo texto o password o email, etc.
+ * @property {boolean} [requerido] Si es true, se marca como obligatorio
+ * @property {string} [expRegular] Expresión regular que se aplicará al texto
+ * @property {string} [className] Propiedad que le da estilos al contenedor
+ * @property {string} [classNameTitulo] Propiedad que le da estilos al titulo
+ * @property {string} [estilosTitulo] Propiedad que le da estilos al titulo
+ * @property {string} [classNameTexto] Propiedad que le da estilos a la caja de texto (input)
+ * @property {string} [estilosTexto] Propiedad que le da estilos a la caja de texto (input)
+ * @property {string} [classNameError] Propiedad que le da estilos al texto de error
+ * @property {string} [estilosError] Propiedad que le da estilos al texto de error
+ * @property {string} [placeholder] Texto que se muestra en el control cuando no hay texto
+ * @property {boolean} [autoFocus] Si es true, se pone el foco en el control
+ * @extends {React.Component<PropsACajaTexto>}
+ */
 class ACajaTexto extends React.Component {
 
-    /**
-     * @constructor
-     * @param {Object} props Objeto que llena automaticamente react
-     * @param {boolean} [props.visible] Si es true, se muestra la etiqueta, si es false, no se muestra
-     * @param {string} props.valor Valor que se muestra en el control
-     * @param {FunctionStringCallback} [props.cambioTexto] Función que se ejecuta cuando se cambia el texto
-     * @param {string} [props.titulo] Texto que se mostrará en la etiqueta
-     * @param {IconType} [props.icono] Icono que se mostrará junto al texto
-     * @param {StyleSheet} [props.estilos] Propiedad que le da estilos al contenedor
-     * @param {string} [props.tipo] Propiedad que le dice al control si es de tipo texto o password o email, etc.
-     * @param {boolean} [props.requerido] Si es true, se marca como obligatorio
-     * @param {string} [props.expRegular] Expresión regular que se aplicará al texto
-     * @param {string} [props.className] Propiedad que le da estilos al contenedor
-     * @param {string} [props.classNameTitulo] Propiedad que le da estilos al titulo
-     * @param {string} [props.estilosTitulo] Propiedad que le da estilos al titulo
-     * @param {string} [props.classNameTexto] Propiedad que le da estilos a la caja de texto (input)
-     * @param {string} [props.estilosTexto] Propiedad que le da estilos a la caja de texto (input)
-     * @param {string} [props.classNameError] Propiedad que le da estilos al texto de error
-     * @param {string} [props.estilosError] Propiedad que le da estilos al texto de error
-     * @param {string} [props.placeholder] Texto que se muestra en el control cuando no hay texto
-     */
     constructor(props){
         super(props);
         this.state = {
@@ -135,7 +137,7 @@ class ACajaTexto extends React.Component {
                     style={this.props.estilos}
                 >
                     <this.TituloACajaTexto />
-                    <div className="acajatexto-contenedor">
+                    <div className="acajatexto-contenedor" style={{ width: "100%" }}>
                         <input
                             required={this.props.requerido}
                             value={this.props.valor}
@@ -144,9 +146,10 @@ class ACajaTexto extends React.Component {
                             id={this.uuid}
                             className={"acajatexto-txt " + this.props.classNameTexto}
                             onChange={(e) => {e.preventDefault(); this._cambioTexto(e.target.value)}}
-                            pattern={this.props.expRegular.toString()}
+                            pattern={this.props.expRegular}
                             placeholder={this.props.placeholder}
                             style={this.props.estilosTexto}
+                            autoFocus={this.props.autoFocus}
                         />
                         {
                             this.props.hasOwnProperty('icono') &&
@@ -164,27 +167,5 @@ class ACajaTexto extends React.Component {
         }
     }
 };
-
-
-/** Validacion de tipos */
-ACajaTexto.propTypes = {
-    visible: PropTypes.bool,
-    valor: PropTypes.string.isRequired,
-    cambioTexto: PropTypes.func,
-    titulo: PropTypes.string,
-    icono: PropTypes.element,
-    estilos: PropTypes.object,
-    tipo: PropTypes.string,
-    requerido: PropTypes.bool,
-    expRegular: PropTypes.arrayOf(PropTypes.instanceOf(RegExp)),
-    className: PropTypes.string,
-    classNameTitulo: PropTypes.string,
-    estilosTitulo: PropTypes.object,
-    classNameTexto: PropTypes.string,
-    estilosTexto: PropTypes.object,
-    classNameError: PropTypes.string,
-    estilosError: PropTypes.object,
-    placeholder: PropTypes.string
-}
 
 export default ACajaTexto;

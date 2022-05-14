@@ -1,17 +1,29 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ACajaTexto from './AComponentes/ACajaTexto';
+import ABoton from './AComponentes/ABoton';
+import AEtiqueta from './AComponentes/AEtiqueta';
+import ATelefono from './AComponentes/ATelefono';
+import ATitulosPantallas from './AComponentes/ATitulosPantallas';
+import ATabla from './AComponentes/ATabla';
+import AControl from './AComponentes/AUtileriaComponentes/AControl';
+import ACheckBox from './AComponentes/ACheckBox';
+import AExpReg from './AComponentes/AUtileriaComponentes/AExpReg';
+import AArchivos from './AComponentes/AArchivos';
+import AMultimedia from './AComponentes/AMultimedia';
+import APanel from './AComponentes/APanel';
+import ALogoCarga from './AComponentes/ALogoCarga';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+export {
+  ACajaTexto,
+  ABoton,
+  AEtiqueta,
+  AControl,
+  AExpReg,
+  ACheckBox,
+  ATitulosPantallas,
+  ATabla,
+  ATelefono,
+  AArchivos,
+  AMultimedia,
+  APanel,
+  ALogoCarga
+}

@@ -1,0 +1,41 @@
+.atabla{
+    position: relative;
+    display: flex;
+    height: 200px;
+    overflow-y: auto;
+
+    scrollbar-width: auto;
+    scrollbar-color: #3c7daf #ffffff;
+}
+
+.atabla-tabla{
+    border-collapse: collapse;
+}
+
+/* Encabezados */
+.atabla-cabeceras{
+    color: white;
+    background-color: #0A2839;
+}
+
+.atabla-cabecera{
+    font-weight: bold;
+}
+
+/* Contenido */
+.atabla-contenido{
+}
+
+.atabla::-webkit-scrollbar {
+    width: 16px;
+}
+
+.atabla::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+.atabla::-webkit-scrollbar-thumb {
+    background-color: #3c7daf;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+}

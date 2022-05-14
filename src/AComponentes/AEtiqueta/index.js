@@ -1,19 +1,18 @@
 import React from "react";
 import "./AEtiqueta.css";
 
-import PropTypes from "prop-types";
-
+/**
+ * @typedef PropsAEtiqueta
+ * @property {boolean} [props.visible] Si es true, se muestra la etiqueta, si es false, no se muestra
+ * @property {string} [props.para] Id del control que se le asignará a la etiqueta
+ * @property {string|StyleSheet} [props.estilos] Estilos que se le aplicarán a la etiqueta
+ * @property {string} [props.className] Clase que se le aplicará a la etiqueta
+ * @property {string} [props.para] Id del control que se le asignará a la etiqueta
+ * @class AEtiqueta
+ * @extends {React.Component<PropsAEtiqueta>}
+ */
 class AEtiqueta extends React.Component{
 
-    /**
-     * @constructor
-     * @param {Object} props Este objeto lo llena automaticamente react
-     * @param {boolean} [props.visible] Si es true, se muestra la etiqueta, si es false, no se muestra
-     * @param {string} [props.para] Id del control que se le asignará a la etiqueta
-     * @param {string|StyleSheet} [props.estilos] Estilos que se le aplicarán a la etiqueta
-     * @param {string} [props.className] Clase que se le aplicará a la etiqueta
-     * @param {string} [props.para] Id del control que se le asignará a la etiqueta
-     */
     constructor(props){
         super(props);
     }
@@ -35,13 +34,5 @@ class AEtiqueta extends React.Component{
         }
     }
 }
-
-AEtiqueta.propTypes = {
-    visible: PropTypes.bool,
-    para: PropTypes.string,
-    children: PropTypes.element.isRequired,
-    estilos: PropTypes.object,
-    className: PropTypes.string
-};
 
 export default AEtiqueta;

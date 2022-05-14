@@ -1,0 +1,54 @@
+.aarchivos {
+    /*position: relative;*/
+    width: 100%;
+    margin:0;
+    padding:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1F94AF;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.aarchivos:hover{
+    background-color: #10515f;
+    cursor: pointer;
+}
+
+.aarchivos-etiqueta {
+    display: block;
+    padding:0;
+}
+
+.aarchivos .aarchivos-input{
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.aarchivos-input + .aarchivos-etiqueta{
+    width: 90%;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    /* background-color: #1F94AF; */
+    display: inline-block;
+    padding: 5px 5%;
+    border-radius: 10px;
+    text-align: center;
+
+    cursor: pointer;
+}
+
+.aarchivos-input:focus + .aarchivos-etiqueta, .aarchivos-input + .aarchivos-etiqueta:hover{
+    /* background-color: #10515f; */
+}
+
+.aarchivos:focus + .aarchivos-etiqueta{
+	outline: 1px dotted #000;
+	outline: -webkit-focus-ring-color auto 5px;
+}
