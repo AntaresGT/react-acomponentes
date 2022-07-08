@@ -1,0 +1,18 @@
+# React AComponentes
+Está es una librería personalizada de componentes para React hecha por Antares
+
+## Dependencias usadas en el proyecto
+
+### Dependencias de desarrollo
+| Dependencia                                                                                       | Documentación                                                                                 | Acción                                                                                        | Tipo          |
+| -- | -- | -- | -- |
+| [react](https://reactjs.org/docs/introduction)                                                    | [React](https://reactjs.org/docs/introduction)                                                | Instalar React                                                                                | Desarrollo    |
+| [typescript](https://www.typescriptlang.org/docs/home.html)                                       | [TypeScript](https://www.typescriptlang.org/docs/home.html)                                   | Sirve para mantener tipos en el desarrollo                                                    | Desarrollo    |
+| [@types/react]                                                                                    | [@types/react](https://www.npmjs.com/package/@types/react)                                    | Sirve para que el compilador reconozca los tipos de react                                     | Desarrollo    |
+| [rollup](https://rollupjs.org/guide/en#installation)                                              | [Rollup](https://rollupjs.org/guide/en#installation)                                          | Sirve para compilar el código                                                                 | Desarrollo    |
+| [@rollup/plugin-node-resolve](https://www.npmjs.com/package/@rollup/plugin-node-resolve)          | [@rollup/plugin-node-resolve](https://www.npmjs.com/package/@rollup/plugin-node-resolve)      | Sirve para la compilacion de typescript y react                                               | Desarrollo    |
+| [@rollup/plugin-commonjs](https://www.npmjs.com/package/@rollup/plugin-commonjs)                  | [@rollup/plugin-commonjs](https://www.npmjs.com/package/@rollup/plugin-commonjs)              | Sirve para la compilación de typescript y react                                               | Desarrollo    |
+| [@rollup/plugin-typescript](https://www.npmjs.com/package/@rollup/plugin-typescript)              | [@rollup/plugin-typescript](https://www.npmjs.com/package/@rollup/plugin-typescript)          | Sirve para la compilación de typescript y react                                               | Desarrollo    |
+| [rollup-plugin-dts](https://www.npmjs.com/package/rollup-plugin-dts)                              | [rollup-plugin-dts](https://www.npmjs.com/package/rollup-plugin-dts)                          | Sirve para la compilación de typescript y react                                               | Desarrollo    |
+| [tslib](https://www.npmjs.com/package/tslib)                                                      | [tslib](https://www.npmjs.com/package/tslib)                                                  | Roolup lo necesita para compilar typescript con react                                         | Desarrollo    |
+| [rollup-plugin-postcss](https://www.npmjs.com/package/rollup-plugin-postcss)                      | [rollup-plugin-postcss](https://www.npmjs.com/package/rollup-plugin-postcss)                  | Sirve para la compilación de css                                                              | Desarrollo    |

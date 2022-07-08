@@ -1,0 +1,32 @@
+{
+  "name": "react-acomponentes",
+  "version": "0.0.1",
+  "description": "Librería creada por Antares",
+  "repository": "https://github.com/AntaresGT/react-acomponentes.git",
+  "author": "Allam López (alan@antaresgt.com)",
+  "license": "MIT",
+  "scripts": {
+    "compilar": "rollup -c"
+  },
+  "dependencies": {
+    "remove": "^0.1.5"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^22.0.1",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.3.3",
+    "@types/react": "^18.0.15",
+    "react": "^18.2.0",
+    "rollup": "^2.75.7",
+    "rollup-plugin-dts": "^4.2.2",
+    "rollup-plugin-postcss": "^4.0.2",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.4"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts"
+}
