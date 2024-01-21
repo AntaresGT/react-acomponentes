@@ -1,5 +1,5 @@
-import ABoton from './ABoton/ABoton';
+import ACajaTexto from './ACajaTexto';
 
 export {
-    ABoton
+    ACajaTexto
 }
