@@ -12,6 +12,8 @@ Este tipo de componentes se inicia con la idea de crear una librería 100% en es
 
 > :warning: **Atención**: La versión actual necesita afinarse más, ya que no soy un expeto en frontend, pero agradecería cualquier sugerencia para hacer de este proyecto una librería potente para latinoamerica.
 
+> :info: **Nota**: Este proyecto se ira actualizando conforme se vayan necesitando más componentes, por lo que se recomienda estar pendiente de las actualizaciones.
+
 ## Instalación
 ### npm
 ```bash
