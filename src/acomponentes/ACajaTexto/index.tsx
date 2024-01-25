@@ -1,8 +1,8 @@
 import './../aconstantes.css'
 import './acajatexto.css'
 import React, { 
-    useState,
-    useEffect,
+    useImperativeHandle,
+    useRef,
     useId
 } from 'react'
 
@@ -66,6 +66,7 @@ export interface ICajaTextoProps{
     valor?: string
     /** Evento de teclear dentro del input */
     cambioTexto?: (texto: string) => void
+    teclaPresionada?: (tecla: string) => void
     /** Coloca un placeholder dentro del input */
     placeholder?: string
     /** Coloca un icono a la izquierda del input */
@@ -92,10 +93,16 @@ export interface ICajaTextoProps{
     tipoEntrada?: "text" | "password" | "number" | "email" | "tel" | "url" | "search" | "date" | "time" | "datetime-local" | "month" | "week" | "color"
     /** Lista de autocompletado */
     autoCompletado?: string[]
+    /** Autofocus */
+    autoFoco?: boolean
+    /** Evento que se ejecuta cuando quitaron el focus */
+    quitoFoco?: () => void
 }
 
 export interface ICajaTextoRef{
-
+    TipoAControl: () => "ACajaTexto"
+    /** Coloca el focus en el AControl */
+    foco: () => void
 }
 
 const ACajaTexto = React.forwardRef<ICajaTextoRef, ICajaTextoProps>(
@@ -104,10 +111,36 @@ const ACajaTexto = React.forwardRef<ICajaTextoRef, ICajaTextoProps>(
         ref
     ){
         const uuid = useId()
+        const inputRef = useRef<HTMLInputElement>(null)
+
+        useImperativeHandle(ref, () => ({
+            TipoAControl: () => {
+                return "ACajaTexto"
+            },
+            foco: () => {
+                if(inputRef.current){
+                    inputRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "start" })
+                    inputRef.current.focus()
+                }
+            }
+        }))
 
         const cambioTexto = (e: React.ChangeEvent<HTMLInputElement>) => {
+            e.preventDefault()
             if(props.cambioTexto){
                 props.cambioTexto(e.target.value)
+            }
+        }
+
+        const teclaPresionada = (e: React.KeyboardEvent<HTMLInputElement>) => {
+            if(props.teclaPresionada){
+                props.teclaPresionada(e.key)
+            }
+        }
+
+        const quitoFoco = () => {
+            if(props.quitoFoco){
+                props.quitoFoco()
             }
         }
 
@@ -140,10 +173,12 @@ const ACajaTexto = React.forwardRef<ICajaTextoRef, ICajaTextoProps>(
                         />
                     }
                     <input
+                        ref={inputRef}
                         id={uuid}
                         name={uuid}
                         value={props.valor}
                         onChange={cambioTexto}
+                        autoFocus={props.autoFoco}
                         style={props.estilosACajaTexto}
                         className={`acajatexto-input ${props.classNameACajaTexto ?? ''}`}
                         placeholder={props.placeholder}
@@ -152,6 +187,8 @@ const ACajaTexto = React.forwardRef<ICajaTextoRef, ICajaTextoProps>(
                         type={props.tipoEntrada ?? "text"}
                         list={(props.autoCompletado != undefined) ? `${uuid}-autocompletadoacajatexto` : undefined}
                         autoComplete='off'
+                        onBlur={() => quitoFoco()}
+                        onKeyDown={teclaPresionada}
                     />
 
                     {

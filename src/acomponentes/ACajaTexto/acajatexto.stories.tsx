@@ -36,6 +36,5 @@ ACajaTextoVisualizacion.args = {
 
 ACajaTextoVisualizacion.argTypes = {
     cambioTexto: { action: "cambioTexto" },
-    quitoFoco: { action: "quitoFoco" },
-    quitoFocus: { action: "quitoFocus" }
+    quitoFoco: { action: "quitoFoco" }
 }
