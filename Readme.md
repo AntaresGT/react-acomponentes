@@ -1,18 +1,75 @@
-# React AComponentes
-Está es una librería personalizada de componentes para React hecha por Antares
+# react-sdgacomponentes
+Librería de componentes basados en react para proyectos de Antares
 
-## Dependencias usadas en el proyecto
+## Documentación
+[Documentación de react-acomponentes (Click aquí)](https://antaresgt.github.io/react-acomponentes/)
 
-### Dependencias de desarrollo
-| Dependencia                                                                                       | Documentación                                                                                 | Acción                                                                                        | Tipo          |
-| -- | -- | -- | -- |
-| [react](https://reactjs.org/docs/introduction)                                                    | [React](https://reactjs.org/docs/introduction)                                                | Instalar React                                                                                | Desarrollo    |
-| [typescript](https://www.typescriptlang.org/docs/home.html)                                       | [TypeScript](https://www.typescriptlang.org/docs/home.html)                                   | Sirve para mantener tipos en el desarrollo                                                    | Desarrollo    |
-| [@types/react]                                                                                    | [@types/react](https://www.npmjs.com/package/@types/react)                                    | Sirve para que el compilador reconozca los tipos de react                                     | Desarrollo    |
-| [rollup](https://rollupjs.org/guide/en#installation)                                              | [Rollup](https://rollupjs.org/guide/en#installation)                                          | Sirve para compilar el código                                                                 | Desarrollo    |
-| [@rollup/plugin-node-resolve](https://www.npmjs.com/package/@rollup/plugin-node-resolve)          | [@rollup/plugin-node-resolve](https://www.npmjs.com/package/@rollup/plugin-node-resolve)      | Sirve para la compilacion de typescript y react                                               | Desarrollo    |
-| [@rollup/plugin-commonjs](https://www.npmjs.com/package/@rollup/plugin-commonjs)                  | [@rollup/plugin-commonjs](https://www.npmjs.com/package/@rollup/plugin-commonjs)              | Sirve para la compilación de typescript y react                                               | Desarrollo    |
-| [@rollup/plugin-typescript](https://www.npmjs.com/package/@rollup/plugin-typescript)              | [@rollup/plugin-typescript](https://www.npmjs.com/package/@rollup/plugin-typescript)          | Sirve para la compilación de typescript y react                                               | Desarrollo    |
-| [rollup-plugin-dts](https://www.npmjs.com/package/rollup-plugin-dts)                              | [rollup-plugin-dts](https://www.npmjs.com/package/rollup-plugin-dts)                          | Sirve para la compilación de typescript y react                                               | Desarrollo    |
-| [tslib](https://www.npmjs.com/package/tslib)                                                      | [tslib](https://www.npmjs.com/package/tslib)                                                  | Roolup lo necesita para compilar typescript con react                                         | Desarrollo    |
-| [rollup-plugin-postcss](https://www.npmjs.com/package/rollup-plugin-postcss)                      | [rollup-plugin-postcss](https://www.npmjs.com/package/rollup-plugin-postcss)                  | Sirve para la compilación de css                                                              | Desarrollo    |
+## Invitame a un café
+[![](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/donate/?hosted_button_id=XPUUVFH8E2BE4)
+
+## Motivación
+Este tipo de componentes se inicia con la idea de crear una librería 100% en español, con la finalidad de que cualquier persona "latinoamericana" pueda utilizarlos sin tener que leer la documentación en inglés y tratar de entender que hacer con los componentes mientras escriben código, al mismo tiempo trabajar con componentes que no necesitan mucha configuración y menos código a la hora de implementar funciones complejas como por ejemplo filtrar, ordenar, generar hojas de cálculo, etc.
+
+> :warning: **Atención**: La versión actual necesita afinarse más, ya que no soy un expeto en frontend, pero agradecería cualquier sugerencia para hacer de este proyecto una librería potente para latinoamerica.
+
+## Instalación
+### npm
+```bash
+npm install react-acomponentes
+```
+
+### yarn
+```bash
+yarn add react-acomponentes
+```
+
+## Comandos de uso
+  Este comando empaqueta el proyecto
+  ```bash
+  yarn compilar
+  ```
+  Este comando abre la documentación para una previsualización
+  ```bash
+  yarn des
+  ```
+  Este comando empaqueta la documentación para subir a un sitio
+  ```bash
+  yarn doc
+  ```
+
+## Uso
+### Componentes
+```jsx
+import { ABoton } from 'react-acomponentes';
+
+const App = () => (
+  <ABoton>
+    Hola mundo
+  </ABoton>
+);
+```
+
+## Dependencias del proyecto
+
+| Dependencia                                                 | Link Documentación                                                                  | Propósito                                                                                               | Tipo dependencia          |
+|:----|:----|:----|:----|
+| react                                                       | https://es.reactjs.org/docs/getting-started.html                                    | Biblioteca de componentes para construir interfaces                                                     | Dependencia compartida    |
+| react-dom                                                   | https://es.reactjs.org/docs/react-dom.html                                          | Renderiza componentes React en un navegador                                                             | Dependencia compartida    |
+| prop-types                                                  | https://www.npmjs.com/package/prop-types                                            | Validación de props para componentes React                                                              | Producción                |
+| typescript                                                  | https://www.typescriptlang.org/docs/                                                | Lenguaje de programación tipado                                                                         | Desarrollo                |
+| @babel/core                                                 | https://babeljs.io/docs/en/babel-core                                               | Transpilador de código JavaScript                                                                       | Desarrollo                |
+| @babel/preset-env                                           | https://babeljs.io/docs/en/babel-preset-env                                         | Configuración de Babel para la última versión de JS                                                     | Desarrollo                |
+| @babel/preset-react                                         | https://babeljs.io/docs/en/babel-preset-react                                       | Configuración de Babel para React                                                                       | Desarrollo                |
+| @babel/preset-typescript                                    | https://babeljs.io/docs/en/babel-preset-typescript                                  | Configuración de Babel para TypeScript                                                                  | Desarrollo                |
+| rollup                                                      | https://rollupjs.org/guide/en/                                                      | Empaquetador de módulos JavaScript                                                                      | Desarrollo                |
+| @rollup/plugin-commonjs                                     | https://github.com/rollup/plugins/tree/master/packages/commonjs                     | Convertidor de módulos CommonJS a ES6                                                                   | Desarrollo                |
+| @rollup/plugin-node-resolve                                 | https://github.com/rollup/plugins/tree/master/packages/node-resolve                 | Resuelve módulos npm en Rollup                                                                          | Desarrollo                |
+| @rollup/plugin-typescript                                   | https://github.com/rollup/plugins/tree/master/packages/typescript                   | Compila TypeScript con Rollup                                                                           | Desarrollo                |
+| @storybook/addon-essentials                                 | https://storybook.js.org/docs/react/essentials/introduction                         | Addon para Storybook que incluye varios addons esenciales                                               | Desarrollo                |
+| @storybook/addon-interactions                               | https://storybook.js.org/docs/react/essentials/actions                              | Addon para Storybook que permite crear interacciones con componentes                                    | Desarrollo                |
+| @storybook/addon-links                                      | https://storybook.js.org/docs/react/essentials/navigation                           | Addon para Storybook que permite crear links entre componentes                                          | Desarrollo                |
+| @storybook/blocks                                           | https://storybook.js.org/docs/react/api/blocks                                      | Componentes predefinidos para Storybook                                                                 | Desarrollo                |
+| @storybook/react                                            | https://storybook.js.org/docs/react/get-started/introduction                        | Herramienta de desarrollo para componentes React                                                        | Desarrollo                |
+| @storybook/react-webpack5                                   | https://storybook.js.org/docs/react/configure/webpack5                              | Configuración para usar Webpack 5 con Storybook                                                         | Desarrollo                |
+| @storybook/testing-library                                  | https://www.npmjs.com/package/@storybook/testing-library                            | Utilidades de testing para componentes Storybook                                                        | Desarrollo                |
+| @types/react                                                | https://www.npmjs.com/package/@types/react                                          | Tipos de TypeScript para React                                                                          | Desarrollo                |
