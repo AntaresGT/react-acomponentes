@@ -1,0 +1,108 @@
+.aboton{
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+
+    box-shadow: 1px 7px 13px 0px rgba(0,0,0,0.36);
+    -webkit-box-shadow: 1px 7px 13px 0px rgba(0,0,0,0.36);
+    -moz-box-shadow: 1px 7px 13px 0px rgba(0,0,0,0.36);
+}
+
+.aboton:disabled{
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.aboton:active{
+    transform: scale(0.95);
+}
+
+.aboton-no-visible{
+    display: none;
+}
+
+.aboton-azul{
+    background-color: var(--azul-aboton-fondo);
+    color: white;
+}
+
+.aboton-azul:hover, .aboton-azul:focus{
+    background-color: var(--azul-aboton-fondo-hover);
+}
+
+.aboton-azul:active{
+    background-color: var(--azul-aboton-fondo-active);
+    transition: all 0.3s ease-in-out;
+}
+
+.aboton-azul:disabled{
+    background-color: var(--azul-aboton-fondo-desactivado);
+    color: var(--azul-aboton-texto-desactivado);
+    box-shadow: none;
+}
+
+.aboton-rojo{
+    background-color: var(--rojo-aboton-fondo);
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.aboton-rojo:active{
+    background-color: var(--rojo-aboton-fondo-active);
+    transition: all 0.3s ease-in-out;
+}
+
+.aboton-rojo:hover, .aboton-rojo:focus{
+    background-color: var(--rojo-aboton-fondo-hover);
+    transition: all 0.3s ease-in-out;
+}
+
+.aboton-rojo:disabled{
+    color: var(--rojo-aboton-texto-desactivado);
+    box-shadow: none;
+}
+
+.aboton-verde{
+    background-color: var(--verde-aboton-fondo);
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.aboton-verde:active{
+    background-color: var(--verde-aboton-fondo-active);
+    transition: all 0.3s ease-in-out;
+}
+
+.aboton-verde:hover, .aboton-verde:focus{
+    background-color: var(--verde-aboton-fondo-hover);
+    transition: all 0.3s ease-in-out;
+}
+
+.aboton-verde:disabled{
+    color: var(--verde-aboton-texto-desactivado);
+    box-shadow: none;
+}
+
+.aboton-celeste{
+    background-color: var(--celeste-aboton-fondo);
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.aboton-celeste:active{
+    background-color: var(--celeste-aboton-fondo-active);
+    transition: all 0.3s ease-in-out;
+}
+
+.aboton-celeste:hover, .aboton-celeste:focus{
+    background-color: var(--celeste-aboton-fondo-hover);
+    transition: all 0.3s ease-in-out;
+}
+
+.aboton-celeste:disabled{
+    color: var(--celeste-aboton-texto-desactivado);
+    box-shadow: none;
+}

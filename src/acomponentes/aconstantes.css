@@ -1,3 +1,23 @@
 :root{
     --primario-acajatexto-borde: #16748D;
+
+    /** Colores de ABoton */
+    --azul-aboton-fondo: #0D546C;
+    --azul-aboton-fondo-hover: #1782a6;
+    --azul-aboton-fondo-active: #0D546C;
+    --azul-aboton-fondo-desactivado: #0278a0;
+    --azul-aboton-texto-desactivado: #b3e0f2;
+    --rojo-aboton-fondo: #e80b0b;
+    --rojo-aboton-fondo-hover: #C62828;
+    --rojo-aboton-fondo-active: #e80b0b;
+    --rojo-aboton-texto-desactivado: #f2b3b3;
+    --verde-aboton-fondo: #198754;
+    --verde-aboton-fondo-active: #198754;
+    --verde-aboton-fondo-hover: #28a745;
+    --verde-aboton-texto-desactivado: #b3f2b3;
+    --celeste-aboton-fondo: #1F94AF;
+    --celeste-aboton-fondo-active: #1F94AF;
+    --celeste-aboton-fondo-hover: #27b7d7;
+    --celeste-aboton-texto-desactivado: #72e0f9;
+    /** Colores de ABoton */
 }

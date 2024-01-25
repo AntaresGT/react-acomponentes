@@ -66,6 +66,7 @@ export interface ICajaTextoProps{
     valor?: string
     /** Evento de teclear dentro del input */
     cambioTexto?: (texto: string) => void
+    /** Evento de presionar una tecla dentro del input */
     teclaPresionada?: (tecla: string) => void
     /** Coloca un placeholder dentro del input */
     placeholder?: string
