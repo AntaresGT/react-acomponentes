@@ -1,4 +1,4 @@
-# react-sdgacomponentes
+# react-acomponentes
 Librería de componentes basados en react para proyectos de Antares
 
 ## Documentación
