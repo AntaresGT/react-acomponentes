@@ -65,7 +65,7 @@ export interface ICajaTextoProps{
     /** Es el valor del input */
     valor?: string
     /** Evento de teclear dentro del input */
-    cambioTexto?: (texto: string) => void
+    cambioValor?: (texto: string) => void
     /** Evento de presionar una tecla dentro del input */
     teclaPresionada?: (tecla: string) => void
     /** Coloca un placeholder dentro del input */
@@ -128,8 +128,8 @@ const ACajaTexto = React.forwardRef<ICajaTextoRef, ICajaTextoProps>(
 
         const cambioTexto = (e: React.ChangeEvent<HTMLInputElement>) => {
             e.preventDefault()
-            if(props.cambioTexto){
-                props.cambioTexto(e.target.value)
+            if(props.cambioValor){
+                props.cambioValor(e.target.value)
             }
         }
 

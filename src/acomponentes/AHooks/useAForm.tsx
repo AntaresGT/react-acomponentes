@@ -17,8 +17,8 @@ interface UseAFormReturn {
   fijarValor: (campo: string, valor: any) => void
   /** Obtiene las propiedades de un input */
   obtenerPropiedadesInput: (campo: string, config?: { type?: string }) => {
-    value: any
-    cambioTexto: (e: string | boolean) => void
+    valor: any
+    cambioValor: (e: string | boolean) => void
     error: string | null
   }
   /** Envía el formulario */
@@ -56,8 +56,8 @@ export function useAForm(valoresIniciales: ValoresIniciales, validacion: ReglasV
 
   const obtenerPropiedadesInput = useCallback((campo: string, config: { type?: string } = {}) => {
     return {
-      value: valores[campo],
-      cambioTexto: (e: string | boolean) => {
+      valor: valores[campo],
+      cambioValor: (e: string | boolean) => {
         fijarValor(campo, e)
       },
       error: errores[campo],
