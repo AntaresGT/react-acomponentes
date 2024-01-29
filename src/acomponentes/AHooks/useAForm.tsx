@@ -47,7 +47,7 @@ export function useAForm(valoresIniciales: ValoresIniciales, validacion: ReglasV
   }, [valores, validacion])
 
   const enviar = useCallback((callback: (valores: ValoresIniciales) => void) => (e: React.FormEvent) => {
-    e.preventDefault()
+    //e.preventDefault()
     const nuevosErrores = validar()
     if (Object.values(nuevosErrores).every(error => error === null)) {
       callback(valores)
