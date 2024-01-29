@@ -9,15 +9,21 @@ interface ReglasValidacion {
 }
 
 interface UseAFormReturn {
+  /** Valores iniciales del AForm */
   valores: ValoresIniciales
+  /** Errores de validación */
   errores: { [key: string]: string | null }
+  /** Fija el valor de un campo */
   fijarValor: (campo: string, valor: any) => void
+  /** Obtiene las propiedades de un input */
   obtenerPropiedadesInput: (campo: string, config?: { type?: string }) => {
     value: any
-    onChange: (e: React.ChangeEvent<any>) => void
+    cambioTexto: (e: string | boolean) => void
     error: string | null
   }
-  enviar: (callback: (valores: ValoresIniciales) => void) => (e: React.FormEvent) => void
+  /** Envía el formulario */
+  enviar: (callback: (valores: ValoresIniciales) => void) => (e: React.FormEvent) => void,
+  reiniciar: () => void
 }
 
 export function useAForm(valoresIniciales: ValoresIniciales, validacion: ReglasValidacion): UseAFormReturn {
@@ -51,12 +57,17 @@ export function useAForm(valoresIniciales: ValoresIniciales, validacion: ReglasV
   const obtenerPropiedadesInput = useCallback((campo: string, config: { type?: string } = {}) => {
     return {
       value: valores[campo],
-      onChange: (e: React.ChangeEvent<any>) => {
-        fijarValor(campo, config.type === 'checkbox' ? e.target.checked : e.target.value)
+      cambioTexto: (e: string | boolean) => {
+        fijarValor(campo, e)
       },
       error: errores[campo],
     }
   }, [valores, errores, fijarValor])
 
-  return { valores, errores, fijarValor, obtenerPropiedadesInput, enviar }
+  const reiniciar = useCallback(() => {
+    setValores(valoresIniciales)
+    setErrores({})
+  }, [valoresIniciales])
+
+  return { valores, errores, fijarValor, obtenerPropiedadesInput, enviar, reiniciar }
 }
