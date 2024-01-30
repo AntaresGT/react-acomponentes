@@ -1,21 +1,19 @@
-import React from 'react';
-import {
-    Meta
-} from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 
 import ALogoCarga from './index';
 
-export default {
+const meta = {
     title: "react-acomponentes/ALogoCarga",
     component: ALogoCarga,
     tags: ["autodocs"]
 } satisfies Meta<typeof ALogoCarga>;
 
-const ALogoCargaPlantilla = (args: any) => <ALogoCarga {...args} />;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const ALogoCargaVisualizacion = ALogoCargaPlantilla.bind({});
-
-ALogoCargaVisualizacion.args = {
-    texto: "Cargando...",
-    visible: true
+export const ALogoCargaVisualizacion: Story =  {
+    args: {
+        texto: "Cargando...",
+        visible: true
+    }
 }
