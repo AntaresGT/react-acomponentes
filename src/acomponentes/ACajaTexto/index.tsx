@@ -56,6 +56,10 @@ function ACajaTextoTitulo(
 export interface ICajaTextoProps{
     /** Indica si el componente es visible o no */
     visible?: boolean
+    /** ClassName del contenedor del input */
+    className?: string
+    /** Estilos del contenedor del input */
+    estilos?: React.CSSProperties
     /** ClassName del Titulo */
     classNameTitulo?: string
     /** Estilos del titulo */
@@ -148,7 +152,8 @@ const ACajaTexto = React.forwardRef<ICajaTextoRef, ICajaTextoProps>(
         return(
             <div
                 key={uuid}
-                className={`acajatexto ${props.hasOwnProperty('visible') ? props.visible ? '' : 'acajatexto-no-visible' : ""}`}
+                className={`acajatexto ${props.className ?? ""} ${props.hasOwnProperty('visible') ? props.visible ? '' : 'acajatexto-no-visible' : ""}`}
+                style={props.estilos}
             >
                 {/** Titulo de ACajaTexto */}
                 {
